@@ -67,6 +67,7 @@ These are the only columns collaborators need:
 - `year`
 - `code`
 - `website`
+- `keywords`
 - `selected`
 
 Everything else is generated automatically when possible from DOI metadata.
@@ -78,6 +79,8 @@ Everything else is generated automatically when possible from DOI metadata.
 - Put author names in `authors` separated by semicolons:
   `Paolo Soda; Valerio Guarrasi`
 - Use DOI when available. The script uses DOI first for metadata enrichment.
+- Put keywords in `keywords` separated by semicolons:
+  `medical imaging; explainability; multimodal learning`
 - BibTeX keys are generated automatically by the script.
 - `selected` accepts `true/false`, `yes/no`, or `1/0`.
 
