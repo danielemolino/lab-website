@@ -1,0 +1,11 @@
+keyword,description
+medical imaging,Broad imaging-focused AI methods across MRI CT X-ray mammography and radiology workflows
+multimodal learning,Methods that combine multiple data modalities or heterogeneous biomedical sources
+generative AI,Generative modelling including GANs diffusion and synthetic data pipelines
+foundation models,Large pretrained or vision-language medical models and related adaptation workflows
+clinical prediction,Risk stratification prognosis and predictive clinical modelling
+explainability,Interpretability trustworthy AI and clinically readable model behaviour
+radiomics,Quantitative imaging biomarkers radiomics and related engineered feature pipelines
+oncology,Cancer-focused applications including lung breast prostate and treatment response settings
+COVID-19,Papers specifically focused on COVID-19 diagnosis prognosis or outbreak analysis
+industrial AI,Applied AI beyond core clinical settings including agriculture forecasting digital twins and monitoring systems

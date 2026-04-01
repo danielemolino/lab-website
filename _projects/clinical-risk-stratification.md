@@ -5,10 +5,11 @@ permalink: /projects/clinical-risk-stratification/
 description: Multimodal decision-support research for patient stratification, outcome prediction, and clinically grounded deployment pathways.
 img: /assets/img/11.jpg
 importance: 2
+project_state: active
 category: decision-support
 project_type: Decision Support
-status: Translational phase
-timeline: 2024-present
+status: Through June 2028
+timeline: 2024-2028
 team:
   - Paolo Soda
   - Valerio Guarrasi
@@ -17,17 +18,16 @@ focus_areas:
   - Multimodal Learning
   - Outcome Prediction
 collaborators:
-  - Campus Bio-Medico University of Rome
+  - Università Campus Bio-Medico di Roma
   - Hospital and clinical partners
 highlights:
   - Multimodal pipelines that integrate imaging, tabular, and longitudinal clinical information.
   - Outcome prediction models designed for robustness under real-world missingness and distribution shift.
   - Decision-support interfaces aligned with practical care pathways and human oversight.
-related_publications:
-  - A systematic review of intermediate fusion in multimodal deep learning for biomedical applications
-  - A deep learning approach for overall survival prediction in lung cancer with missing values
-  - A graph neural network-based model with out-of-distribution robustness for enhancing antiretroviral therapy outcome prediction for HIV-1
+project_filter: clinical-risk-stratification
 ---
+
+{% assign project_publications = site.data.publications | where_exp: "item", "item.projects contains page.project_filter" %}
 
 <section class="project-profile">
   <div class="project-profile-hero">
@@ -71,21 +71,6 @@ related_publications:
         <p>{{ page.timeline }}</p>
       </div>
       <div class="project-profile-panel-block">
-        <h3>Team</h3>
-        <ul class="project-profile-list">
-          {% for person in page.team %}
-            {% assign team_member = site.data.team | where: "name", person | first %}
-            <li>
-              {% if team_member and team_member.profile_path %}
-                <a href="{{ team_member.profile_path }}">{{ person }}</a>
-              {% else %}
-                {{ person }}
-              {% endif %}
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-      <div class="project-profile-panel-block">
         <h3>Collaborators</h3>
         <ul class="project-profile-list">
           {% for organization in page.collaborators %}
@@ -107,14 +92,24 @@ related_publications:
 
   <div class="project-profile-section">
     <h2>Related Publications</h2>
-    <div class="about-publications-list">
-      {% for publication in page.related_publications %}
-        <article class="about-publication-item">
-          <p class="about-publication-citation">
-            <a href="/publications/">{{ publication }}</a>
-          </p>
-        </article>
-      {% endfor %}
-    </div>
+    {% if project_publications and project_publications != empty %}
+      {% include publication_cards.liquid publications=project_publications %}
+    {% else %}
+      <div class="publications project-related-publications">
+        <ol class="bibliography">
+          <li>
+            <div class="row">
+              <div class="col-sm-10">
+                <div class="title">Project-linked publications</div>
+                <div class="periodical">No publications are linked to this project yet. Once project tags are assigned in the publications workflow, related outputs will appear here automatically.</div>
+                <div class="links">
+                  <a href="/publications/?project={{ page.project_filter | url_encode }}" class="btn btn-sm z-depth-0" role="button">Browse Publications</a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    {% endif %}
   </div>
 </section>

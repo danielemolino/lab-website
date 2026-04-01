@@ -68,6 +68,7 @@ These are the only columns collaborators need:
 - `code`
 - `website`
 - `keywords`
+- `projects`
 - `selected`
 
 Everything else is generated automatically when possible from DOI metadata.
@@ -81,6 +82,12 @@ Everything else is generated automatically when possible from DOI metadata.
 - Use DOI when available. The script uses DOI first for metadata enrichment.
 - Put keywords in `keywords` separated by semicolons:
   `medical imaging; explainability; multimodal learning`
+- Use only the controlled keyword vocabulary stored in:
+  `shared/publication_keyword_vocab.csv`
+- Put project ids in `projects` separated by semicolons:
+  `explainable-brain-mri; clinical-risk-stratification`
+- The list of valid project ids is derived automatically from `_projects/` and is also pushed to the Google Sheet in the helper tab:
+  `project_ids`
 - BibTeX keys are generated automatically by the script.
 - `selected` accepts `true/false`, `yes/no`, or `1/0`.
 
@@ -102,6 +109,9 @@ If you do not care about featured papers right now, set it to `false` by default
 - deduplicates by DOI, then by normalized title
 - generates a BibTeX key automatically
 - rewrites `_bibliography/papers.bib`
+- mirrors helper tabs to Google Sheets for:
+  - controlled keyword vocabulary
+  - valid project ids
 
 ## Commands
 
