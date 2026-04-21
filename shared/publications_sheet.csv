@@ -154,4 +154,6 @@ publish,AIforCOVID: Predicting the clinical outcomes in patients with COVID-19 a
 ,,,,,,,,,
 publish,A Multi-Expert System to Detect COVID-19 Cases in X-ray Images,10.1109/CBMS52027.2021.00090,Valerio Guarrasi; Natascha Claudia D'Amico; Rosa Sicilia; Ermanno Cordelli; Paolo Soda,2021,,,COVID-19; medical imaging; multimodal learning,covid-prognosis-platform,FALSE
 ,,,,,,,,,
-publish,A radiomic approach for adaptive radiotherapy in non-small cell lung cancer patients,10.1371/journal.pone.0207455,Sara Ramella; Michele Fiore; Carlo Greco; Ermanno Cordelli; Rosa Sicilia; Mario Merone; E. Molfese; M. Miele; Patrizia Cornacchione; Edy Ippolito; Giulio Iannello; Rolando Maria D’Angelillo; Paolo Soda,2018,,,radiomics; oncology; clinical prediction,,FALSE
+publish,A radiomic approach for adaptive radiotherapy in non-small cell lung cancer patients,10.1371/journal.pone.0207455,Sara Ramella; Michele Fiore; Carlo Greco; Ermanno Cordelli; Rosa Sicilia; Mario Merone; E. Molfese; M. Miele; Patrizia Cornacchione; Edy Ippolito; Giulio Iannello; Rolando Maria D’Angelillo; Paolo Soda,2018,,,radiomics; oncology; clinical prediction,,FALSE
+,,,,,,,,,
+publish,Hybrid Quantum Neural Network for Multivariate Clinical Time Series Forecasting,10.48550/arXiv.2603.08072,Irene Iele; Floriano Caprio; Paolo Soda; Matteo Tortora,2026,,,multimodal learning,,TRUE
