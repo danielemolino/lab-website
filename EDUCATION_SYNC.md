@@ -21,8 +21,8 @@ Use these columns:
 - `description`
 - `holder`
 - `assistants`
-- `year`
-- `term`
+
+`degree_program` is the grouping field used on the page. Use the actual degree programme name for regular teaching entries. Use `Masters` and `Summer Schools` for the two always-visible sections that appear after the degree programmes.
 
 `assistants` should be separated by semicolons:
 
