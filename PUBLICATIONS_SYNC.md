@@ -34,6 +34,14 @@ Keep it as a fallback template and as an example of the expected columns.
 
 ## Recommended workflow
 
+If you start from a fresh OpenAlex export, first convert it into the site sheet format:
+
+```bash
+python3 scripts/convert_openalex_publications.py
+```
+
+Then continue with the site sync:
+
 1. Upload `shared/publications_sheet.csv` to Google Drive.
 2. Open it with Google Sheets.
 3. Share the sheet with collaborators.
@@ -47,6 +55,12 @@ python3 scripts/sync_publications.py
 ```
 
 7. Rebuild the site with Docker and check `/publications/`.
+
+If you want to push the local CSV back to Drive after conversion or edits, run:
+
+```bash
+python3 scripts/push_publications_to_sheet.py
+```
 
 ## Optional one-off source override
 
