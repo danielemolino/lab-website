@@ -1,3 +1,73 @@
-status,title,degree_program,cfu,holder,assistants
-publish,Data Science Fundamentals,BSc in Industrial Engineering,6,Prof. Placeholder Name,"Teaching Assistant One; Teaching Assistant Two"
-publish,Introduction to Machine Learning,MSc in Intelligent Systems Engineering,8,Prof. Placeholder Name,"Teaching Assistant One; Teaching Assistant Two"
+status,title,degree_program,cfu,holder,assistants
+,,,,,
+publish,Fundamentals of Computer Science,BSc in Industrial Engineering,9,Prof. Giulio Iannello; Dr. Anna Sabatini,Dr. Pierangelo Afferni
+,,,,,
+publish,Information Systems,BSc in Industrial Engineering,6,Prof. Luca Vollero,Dr. Roberto Bagnato
+,,,,,
+publish,Modular Programming,BSc in Industrial Engineering,6,Dr. Marcello Esposito; Dr. Pierangelo Afferni,Dr. Roberto Bagnato
+,,,,,
+publish,Operating Systems & Computer Networks,BSc in Industrial Engineering,6,Prof. Giulio Iannello; Dr. Ermanno Cordelli,Dr. Riccardo De Luca
+,,,,,
+publish,Digital Systems Control,BSc in Industrial Engineering,6,Prof. Filippo Cacace,Prof. Alfredo Germani
+,,,,,
+publish,Probability and Statistics for Engineering,BSc in Industrial Engineering,6,Prof. Filippo Cacace,Dr. Massimiliano D'Angelo
+,,,,,
+no,Laboratorio,,,,
+,,,,,
+publish,MATLAB for Mathematical Methods,BSc in Industrial Engineering,3,Prof. Filippo Cacace,
+,,,,,
+publish,Computer Science,BSc in Biomedical Engineering,9,Prof. Luca Vollero; Dr. Ermanno Cordelli,Dr. Simone Saverio Fildi
+,,,,,
+publish,Health Information Systems & Telemedicine,BSc in Biomedical Engineering,9,Dr. Anna Sabatini; Dr. Ermanno Cordelli,Dr. Gianmarco Lo Mele
+,,,,,
+publish,Automatic Control,BSc in Biomedical Engineering,9,Prof. Filippo Cacace,Dr. Massimiliano D'Angelo
+,,,,,
+publish,Fundamentals of Artificial Intelligence,MSc in Intelligent Systems Engineering,15,Prof. Paolo Soda; Dr. Valerio Guarrasi; Dr. Matteo Tortora; Dr. Marcello Esposito,Prof. Giulio Iannello
+,,,,,
+publish,Distributed Systems Architectures,MSc in Intelligent Systems Engineering,9,Prof. Luca Vollero; Dr. Ermanno Cordelli,Dr. Roberto Bagnato; Dr. Pierangelo Afferni
+,,,,,
+publish,Deep Learning,MSc in Intelligent Systems Engineering,9,Prof. Paolo Soda; Prof. Rosa Sicilia; Dr. Matteo Tortora,Dr. Marco Salmè
+,,,,,
+publish,Generative AI,MSc in Intelligent Systems Engineering,9,Dr. Valerio Guarrasi; Dr. Eleonora Grassucci,Dr. Daniele Molino
+,,,,,
+publish,Intelligent Architectures,MSc in Intelligent Systems Engineering,9,Prof. Paolo Soda; Dr. Ermanno Cordelli; Dr. Floriano Caprio,Dr. Giordano Piscitelli
+,,,,,
+publish,Machine Learning & Big Data Analytics,MSc in Biomedical Engineering,6,Prof. Paolo Soda; Dr. Valerio Guarrasi,Dr. Francesco Sarcina
+,,,,,
+publish,Edge Computing and TinyML,MSc in Biomedical Engineering,6,Dr. Anna Sabatini; Dr. Ermanno Cordelli,Dr. Simone Saverio Fildi
+,,,,,
+publish,Digital Infrastructures for Healthcare,MSc in Biomedical Engineering,6,Prof. Paolo Soda,Dr. Riccardo De Luca
+,,,,,
+publish,Computer Science,BSc in Food Science and Human Nutrition,6,Dr. Simone Grasso,
+,,,,,
+publish,Sensors and Artificial Intelligence in the Food Industry,BSc in Food Science and Human Nutrition,6,Prof. Luca Vollero,Dr. Simone Grasso
+,,,,,
+publish,Computer Science,MSc in Medicine and Surgery (MedTech),6,Prof. Luca Vollero; Dr. Ermanno Cordelli,Dr. Fatih Aksu
+,,,,,
+publish,Image Processing,MSc in Medicine and Surgery (MedTech),6,Prof. Paolo Soda; Dr. Valerio Guarrasi,Dr. Alessandro Pesci
+,,,,,
+publish,AI & Data Mining,MSc in Medicine and Surgery (MedTech),6,Dr. Valerio Guarrasi,Dr. Francesco Sarcina
+,,,,,
+publish,Health Information Systems & Telemedicine,MSc in Medicine and Surgery (MedTech),6,Dr. Anna Sabatini; Dr. Ermanno Cordelli,Dr. Gianmarco Lo Mele
+,,,,,
+publish,Computer Science,MSc in Medicine and Surgery,6,Dr. Ermanno Cordelli,Dr. Gianmarco Lo Mele; Dr. Arianna Francesconi
+,,,,,
+publish,Computer Science,"Degree Course in Techniques in Medical Radiology, Imaging, and Radiotherapy",6,Dr. Matteo Tortora,Dr. Ludovica Pompilio
+,,,,,
+publish,Introduction to Image Processing,"Degree Course in Techniques in Medical Radiology, Imaging, and Radiotherapy",6,Dr. Guido Manni,Dr. Irene Iele
+,,,,,
+publish,Computer Science,MSc in Dentistry and Dental Prosthetics,6,Dr. Ermanno Cordelli,Dr. Arianna Francesconi
+,,,,,
+publish,Computer Science,BSc in Physiotherapy,6,Dr. Matteo Tortora,Dr. Ludovica Pompilio
+,,,,,
+publish,Computer Science,MSc in Rehabilitation Sciences for Healthcare Professions,6,Prof. Paolo Soda,Dr. Riccardo De Luca
+,,,,,
+publish,Data Processing,MSc in Rehabilitation Sciences for Healthcare Professions,6,Prof. Paolo Soda,Dr. Irene Iele
+,,,,,
+publish,Computer Science,Degree Course in Speech Therapy,6,Prof. Paolo Soda,Dr. Arianna Francesconi
+,,,,,
+publish,Computer Science,Degree Course in Nursing,6,Dr. Anna Sabatini,Dr. Gianmarco Lo Mele
+,,,,,
+publish,1° level Master in Data Analytics for Business for Enel @ UCBM,Masters,,"Prof. Paolo Soda, Dr. Valerio Guarrasi",
+,,,,,
+publish,Summer School on Artificial Intelligence in Health and Life Sciences,Summer Schools,,"Prof. Paolo Soda, Dr. Valerio Guarrasi",

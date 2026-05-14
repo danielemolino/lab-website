@@ -1,6 +1,7 @@
 ---
 layout: page
 title: We-ease-it
+full_title: Hospital 4.0 telemonitoring platform for frail patients
 permalink: /projects/we-ease-it/
 description: Hospital 4.0 telemonitoring platform for frail patients, combining home-life data, hospital information systems, and AI-driven predictive models.
 img: /assets/projects/we-ease-it-model.png

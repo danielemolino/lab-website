@@ -29,7 +29,7 @@ This workflow keeps the site news page lightweight by mirroring LinkedIn-style u
 5. Run:
 
 ```bash
-python3 scripts/sync_news.py
+python scripts/sync_news.py
 ```
 
 This updates `_data/news_feed.yml` and mirrors the remote CSV back into `shared/news_sheet.csv`.
@@ -37,5 +37,5 @@ This updates `_data/news_feed.yml` and mirrors the remote CSV back into `shared/
 To push the local CSV into the shared sheet:
 
 ```bash
-python3 scripts/push_news_to_sheet.py
+python scripts/push_news_to_sheet.py
 ```

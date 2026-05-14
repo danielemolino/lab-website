@@ -31,13 +31,13 @@ This file is ignored by git.
 ### Install dependencies
 
 ```bash
-python3 -m pip install google-api-python-client google-auth
+python -m pip install google-api-python-client google-auth
 ```
 
 ### Push local CSV to the shared sheet
 
 ```bash
-python3 scripts/push_publications_to_sheet.py
+python scripts/push_publications_to_sheet.py
 ```
 
 ### Notes

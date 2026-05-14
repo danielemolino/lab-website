@@ -100,7 +100,6 @@ The automatic downloader expects:
 - `scholar_url`
 - `orcid_url`
 - `interests`
-- `short_bio`
 - `bio`
 - `github_url`
 - `linkedin_url`
@@ -138,25 +137,25 @@ This is enough for the current workflow and removes the need to hand-maintain pu
 Normal run:
 
 ```bash
-python3 scripts/sync_team.py
+python scripts/sync_team.py
 ```
 
 Override the source once:
 
 ```bash
-python3 scripts/sync_team.py --source "PASTE_SHEET_URL_OR_CSV_URL_HERE"
+python scripts/sync_team.py --source "PASTE_SHEET_URL_OR_CSV_URL_HERE"
 ```
 
 Override the local photos folder once:
 
 ```bash
-python3 scripts/sync_team.py --photos-source "PATH/TO/LOCAL/PHOTO/FOLDER"
+python scripts/sync_team.py --photos-source "PATH/TO/LOCAL/PHOTO/FOLDER"
 ```
 
 Override the Google Drive photo folder once:
 
 ```bash
-python3 scripts/sync_team.py --photos-drive-folder "PASTE_PUBLIC_DRIVE_FOLDER_URL_HERE"
+python scripts/sync_team.py --photos-drive-folder "PASTE_PUBLIC_DRIVE_FOLDER_URL_HERE"
 ```
 
 ## Important note

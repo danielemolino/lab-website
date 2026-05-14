@@ -37,7 +37,7 @@ Keep it as a fallback template and as an example of the expected columns.
 If you start from a fresh OpenAlex export, first convert it into the site sheet format:
 
 ```bash
-python3 scripts/convert_openalex_publications.py
+python scripts/convert_openalex_publications.py
 ```
 
 Then continue with the site sync:
@@ -51,7 +51,7 @@ Then continue with the site sync:
 6. Run:
 
 ```bash
-python3 scripts/sync_publications.py
+python scripts/sync_publications.py
 ```
 
 7. Rebuild the site with Docker and check `/publications/`.
@@ -59,7 +59,7 @@ python3 scripts/sync_publications.py
 If you want to push the local CSV back to Drive after conversion or edits, run:
 
 ```bash
-python3 scripts/push_publications_to_sheet.py
+python scripts/push_publications_to_sheet.py
 ```
 
 ## Optional one-off source override
@@ -67,7 +67,7 @@ python3 scripts/push_publications_to_sheet.py
 If you want to test a different sheet once without touching the JSON config:
 
 ```bash
-python3 scripts/sync_publications.py --source "PASTE_SHEET_URL_OR_CSV_URL_HERE"
+python scripts/sync_publications.py --source "PASTE_SHEET_URL_OR_CSV_URL_HERE"
 ```
 
 ## Minimal sheet columns
@@ -132,13 +132,13 @@ If you do not care about featured papers right now, set it to `false` by default
 Normal run:
 
 ```bash
-python3 scripts/sync_publications.py
+python scripts/sync_publications.py
 ```
 
 Run without metadata enrichment:
 
 ```bash
-python3 scripts/sync_publications.py --no-enrich
+python scripts/sync_publications.py --no-enrich
 ```
 
 ## Important note

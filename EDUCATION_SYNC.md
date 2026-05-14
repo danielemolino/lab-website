@@ -39,7 +39,7 @@ Assistant One; Assistant Two
 5. Run:
 
 ```bash
-python3 scripts/sync_education.py
+python scripts/sync_education.py
 ```
 
 This updates `_data/education_courses.yml` and mirrors the remote CSV back into `shared/education_sheet.csv`.
@@ -47,5 +47,5 @@ This updates `_data/education_courses.yml` and mirrors the remote CSV back into 
 If you edit the local CSV first and want to push it to the shared sheet:
 
 ```bash
-python3 scripts/push_education_to_sheet.py
+python scripts/push_education_to_sheet.py
 ```
