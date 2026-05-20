@@ -51,9 +51,14 @@ Scaricare dati dal Google Sheet e rigenerare il feed:
 python3 scripts/sync_news.py
 ```
 
+Usare il CSV locale senza scaricare lo Sheet:
+
+```bash
+python3 scripts/sync_news.py --source shared/news_sheet.csv
+```
+
 Caricare il CSV locale sul Google Sheet:
 
 ```bash
 python3 scripts/push_news_to_sheet.py
 ```
-

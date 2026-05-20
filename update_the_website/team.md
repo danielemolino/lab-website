@@ -57,6 +57,12 @@ camillo_maria_caruso.jpg
 
 Lo script normalizza nome e cognome, copia la foto in `assets/team_photos/` e la collega automaticamente. Se non trova la foto, usa il placeholder.
 
+## Pubblicazioni nei profili
+
+Ogni scheda membro mostra automaticamente fino alle 10 pubblicazioni più recenti associate al nome della persona nella bibliografia.
+
+Il bottone `Browse All Publications` apre la pagina Publications filtrata per quel membro, quindi permette di vedere l'elenco completo oltre alle 10 mostrate nel profilo.
+
 ## Dropdown ruolo
 
 Lo script `scripts/push_team_to_sheet.py` applica una validazione sul campo `role` del Google Sheet. Il menu deve contenere solo:
@@ -77,9 +83,14 @@ Scaricare dati dal Google Sheet e rigenerare il sito:
 python3 scripts/sync_team.py
 ```
 
+Usare il CSV locale senza scaricare lo Sheet:
+
+```bash
+python3 scripts/sync_team.py --source shared/team_sheet.csv
+```
+
 Caricare il CSV locale sul Google Sheet e riapplicare il dropdown:
 
 ```bash
 python3 scripts/push_team_to_sheet.py
 ```
-

@@ -26,7 +26,9 @@ Per pubblicare una riga sul sito, mettere `publish` nella colonna `status`. Per 
 | `code` | opzionale | URL GitHub o repository codice. |
 | `website` | opzionale | URL pagina progetto, demo, dataset o paper website. |
 | `keywords` | consigliato | Una o più keyword controllate, separate da `;`. |
-| `projects` | consigliato quando applicabile | Uno o più `project_filter` dei progetti, separati da `;`. |
+| `project_1` | consigliato quando applicabile | Primo `project_filter` associato alla pubblicazione. Usare il dropdown. |
+| `project_2` | opzionale | Secondo `project_filter`, se la pubblicazione appartiene a più progetti. |
+| `project_3` | opzionale | Terzo `project_filter`, se necessario. |
 
 La colonna `selected` è stata rimossa: non serve più al flusso attuale del sito. Le pagine Team mostrano automaticamente le pubblicazioni più recenti, non una selezione manuale.
 
@@ -55,35 +57,17 @@ medical imaging; generative AI; oncology
 
 ## Progetti ammessi
 
-Usare solo i valori `project_filter` presenti nelle pagine progetto:
+Usare solo i valori `project_filter` presenti nel tracking Projects (`shared/projects_sheet.csv` / Google Sheet Projects). I progetti disponibili nei dropdown Publications vengono derivati da lì, così l'elenco non va mantenuto a mano in due punti diversi.
+
+Per associare più progetti alla stessa pubblicazione, usare una colonna per progetto:
 
 ```text
-aida
-bistoury
-cesm-ucbm
-claro
-cyber-acn
-fair
-fit4medrob
-idea
-maeci-italy-china
-luminate
-mise
-pacy
-picture
-rome-technopole
-virtual-scanner
-visual4dtracker
-we-ease-it
-xdeepscan
-xgem
+project_1 = aida
+project_2 = picture
+project_3 =
 ```
 
-Per più progetti nella stessa cella:
-
-```text
-aida; picture
-```
+Non inserire più progetti nella stessa cella.
 
 ## Dropdown keyword e progetti
 
@@ -92,9 +76,9 @@ Lo script `scripts/push_publications_to_sheet.py` aggiorna anche due tab di supp
 - `keyword_vocab`
 - `project_ids`
 
-e applica una validazione sulle colonne `keywords` e `projects`.
+e applica una validazione sulle colonne `keywords`, `project_1`, `project_2` e `project_3`. Il tab `project_ids` viene generato dal tracking Projects.
 
-Nota pratica: Google Sheets non gestisce in modo affidabile un vero multi-select semicolon via API. La validazione è quindi non bloccante: il menu aiuta a scegliere valori coerenti, ma per inserire più valori bisogna separarli con `;`.
+Nota pratica: Google Sheets non gestisce in modo affidabile un vero multi-select nella stessa cella via API. Per questo i progetti sono divisi in più colonne, ognuna con il proprio dropdown.
 
 ## Comandi utili
 
@@ -112,3 +96,20 @@ Caricare il CSV locale sul Google Sheet, aggiornare tab di supporto e dropdown:
 python3 scripts/push_publications_to_sheet.py
 ```
 
+Usare il CSV locale e rigenerare soltanto i file del sito, senza scaricare lo Sheet:
+
+```bash
+python3 scripts/sync_publications.py --source shared/publications_sheet.csv --no-enrich
+```
+
+Se sono stati aggiunti o modificati progetti, eseguire prima:
+
+```bash
+python3 scripts/sync_projects.py
+```
+
+Per aggiornare solo i tab di supporto e i dropdown, senza riscrivere le righe dello Sheet Publications:
+
+```bash
+python3 scripts/push_publications_to_sheet.py --helpers-only
+```

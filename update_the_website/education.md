@@ -36,9 +36,14 @@ Scaricare dati dal Google Sheet e rigenerare la pagina Education:
 python3 scripts/sync_education.py
 ```
 
+Usare il CSV locale senza scaricare lo Sheet:
+
+```bash
+python3 scripts/sync_education.py --source shared/education_sheet.csv
+```
+
 Caricare il CSV locale sul Google Sheet:
 
 ```bash
 python3 scripts/push_education_to_sheet.py
 ```
-
