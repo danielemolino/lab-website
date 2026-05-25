@@ -4,8 +4,11 @@ Sheet: https://docs.google.com/spreadsheets/d/1XcMmFZr8Os7sye7R3X8LMB0q0T_EFcDmf
 
 File locale sincronizzato: `shared/news_sheet.csv`
 
+Cartella locale immagini da caricare/aggiornare: `shared/news_images_uploads/`
+
 Output generato:
 - `_data/news_feed.yml`
+- `assets/news/<nome_file>`
 
 ## Regola generale
 
@@ -25,7 +28,7 @@ Le news sono una replica editoriale del feed LinkedIn: non è un embed automatic
 | `summary` | si | Testo della news in 1-3 frasi. Deve essere leggibile anche senza aprire LinkedIn. |
 | `category` | consigliato | Categoria breve, es. `Publication`, `Talk`, `Milestone`, `Project`, `Award`. |
 | `linkedin_url` | consigliato | URL del post LinkedIn originale. |
-| `image_url` | opzionale | URL immagine se si vuole forzare una preview esterna. Lasciare vuoto se non serve. |
+| `image_url` | opzionale | URL immagine o nome file. Lo script scarica/copia l'immagine e nel sito genera un path locale in `assets/news/`. Lasciare vuoto se non serve. |
 
 ## URL LinkedIn
 
@@ -42,6 +45,28 @@ https://www.linkedin.com/posts/arco-unicampus_...
 ```
 
 Il sito usa questo URL come link esterno verso il post originale. Il testo mostrato nel sito viene invece dalla colonna `summary`.
+
+## Immagini
+
+Se `image_url` contiene un URL diretto a un'immagine, lo script prova a scaricarla in `assets/news/` e poi usa il path locale nel sito.
+
+Esempio valido:
+
+```text
+https://media.licdn.com/dms/image/...
+```
+
+Se si preferisce gestire il file manualmente:
+
+1. salvare l'immagine in `shared/news_images_uploads/`;
+2. inserire in `image_url` solo il nome file, ad esempio `isbi-pet-ct.jpg`;
+3. eseguire lo sync.
+
+Il file finale usato dal sito sarà:
+
+```text
+/assets/news/isbi-pet-ct.jpg
+```
 
 ## Comandi utili
 
