@@ -48,12 +48,18 @@ Il sito usa questo URL come link esterno verso il post originale. Il testo mostr
 
 ## Immagini
 
-Se `image_url` contiene un URL diretto a un'immagine, lo script prova a scaricarla in `assets/news/` e poi usa il path locale nel sito.
+Se `image_url` contiene un URL diretto a un'immagine, lo script prova a scaricarla in `assets/news/` e poi usa il path locale nel sito. Questo evita di dipendere da URL esterni temporanei, per esempio quelli di LinkedIn.
 
 Esempio valido:
 
 ```text
 https://media.licdn.com/dms/image/...
+```
+
+Quando lo sync riesce, `_data/news_feed.yml` non deve contenere piu' l'URL LinkedIn dell'immagine, ma un path locale:
+
+```text
+/assets/news/2026-04-13-arco-lab-presents-pet-ct-tumor-segmentation-research-at-isbi.jpg
 ```
 
 Se si preferisce gestire il file manualmente:
@@ -67,6 +73,13 @@ Il file finale usato dal sito sarà:
 ```text
 /assets/news/isbi-pet-ct.jpg
 ```
+
+Nota per GitHub Pages: le immagini devono essere committate insieme ai dati news. Se dopo il deploy le immagini non compaiono, controllare che:
+
+- il file sia presente in `assets/news/`;
+- `_data/news_feed.yml` punti a `/assets/news/<nome_file>`;
+- `_pages/news.md` usi `relative_url` quando stampa `item.image_url`;
+- il commit includa sia `_data/news_feed.yml` sia i file in `assets/news/`.
 
 ## Comandi utili
 
@@ -86,4 +99,20 @@ Caricare il CSV locale sul Google Sheet:
 
 ```bash
 python3 scripts/push_news_to_sheet.py
+```
+
+## Dopo lo sync
+
+Dopo avere eseguito `sync_news.py`, verificare cosa e' cambiato:
+
+```bash
+git status --short -- _data/news_feed.yml assets/news _pages/news.md
+```
+
+Se sono state aggiunte o aggiornate immagini, pubblicare anche gli asset statici:
+
+```bash
+git add _data/news_feed.yml assets/news
+git commit -m "Update news feed"
+git push
 ```
